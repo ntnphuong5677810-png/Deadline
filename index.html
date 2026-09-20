@@ -5,9 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Jackson Electronics</title>
     <style>
+      .bottom {
+        text-align: 50px;
+        margin-top: 0;
+        left: 40%;
+      }
       body {
-        padding: 10px 0;
-        margin: 0;
+        padding: 0px;
         background-color: #ffffff;
       }
 
@@ -18,10 +22,6 @@
         background-color: rgb(154, 210, 254);
       }
 
-      .de {
-        font-size: 28px;
-      }
-
       h1 {
         margin: -4px 0;
         font-family: "Times New Roman", Times, serif;
@@ -29,13 +29,14 @@
       }
 
       h2 {
-        font-size: 25px;
+        font-size: 26px;
         text-align: center;
         font-family: "Times New Roman", Times, serif;
-        margin-bottom: 0px;
+        margin: 10px 0 5px;
+        margin-bottom: 25px;
       }
 
-      .block {
+      .logo {
         padding: 5px 0;
         width: 240px;
         display: inline-block;
@@ -44,8 +45,18 @@
         background-color: #00ffff;
         border: 2px solid black;
         box-shadow: 6px 6px 1px grey;
+        margin-bottom: 25px;
       }
 
+      .de {
+        font-size: 28px;
+        font-family: "Times New Roman", Times, serif;
+        font-weight: bold;
+      }
+
+      .intro {
+        margin-bottom: 0px;
+      }
       hr {
         height: 5px;
         margin: 5px 0;
@@ -62,64 +73,51 @@
       table td:first-child {
         width: 220px;
       }
-
       td {
-        padding: 6px 4px;
+        padding: 1px -10px;
       }
     </style>
   </head>
   <body>
     <div class="wrapper">
       <center>
-        <div class="block">
+        <div class="logo">
           <div class="de">Jackson</div>
           <hr />
           <div class="de">Electronics</div>
         </div>
 
         <h2>Registration Form</h2>
-        <p>Register your Jackson Electronics product here</p>
+        <div class="intro">Register your Jackson Electronics product here</div>
 
         <form>
           <table>
             <tr>
-              <td style="white-space: nowrap">
-                <label for="name">First Name:</label>
-              </td>
-              <td>
+              <td><label for="name">First Name:</label></td>
+              <td colspan="2">
                 <input type="text" id="name" name="first_name" required />
-              </td>
-              <td style="white-space: nowrap; padding-left: 15px">
-                <label for="LastName">Last Name:</label>
-              </td>
-              <td>
-                <input type="text" id="LastName" name="last_name" required />
-              </td>
-            </tr>
-
-            <tr>
-              <td><label for="address1">Address #1:</label></td>
-              <td colspan="3">
+                <label for="LastName" style="margin-left: 0px style="white-space: nowrap">Last Name:</label>
                 <input
                   type="text"
-                  id="address1"
-                  name="address1"
-                  size="40"
+                  id="LastName"
+                  name="LastName"
+                  size="10"
                   required
                 />
               </td>
             </tr>
 
             <tr>
-              <td><label for="address2">Address #2:</label></td>
+              <td><label for="add1">Address #1:</label></td>
               <td colspan="3">
-                <input
-                  type="text"
-                  id="address2"
-                  name="address2"
-                  size="40"
-                  required
-                />
+                <input type="text" id="add1" name="add1" size="32" required />
+              </td>
+            </tr>
+
+            <tr>
+              <td><label for="add2">Address #2:</label></td>
+              <td colspan="3">
+                <input type="text" id="add2" name="add2" size="32" required />
               </td>
             </tr>
 
@@ -127,9 +125,9 @@
               <td><label for="city">City:</label></td>
               <td colspan="3">
                 <input type="text" id="city" name="city" required />
-                <label for="state" style="margin-left: 10px">State:</label>
-                <input type="text" id="state" name="state" size="4" required />
-                <label for="zip" style="margin-left: 10px">Zip:</label>
+                <label for="state" style="margin-left: 0px">State:</label>
+                <input type="text" id="state" name="state" size="3" required />
+                <label for="zip" style="margin-left: 0px">Zip:</label>
                 <input type="text" id="zip" name="zip" size="8" required />
               </td>
             </tr>
@@ -178,7 +176,7 @@
             <tr>
               <td valign="top">Used for:</td>
 
-              <td>
+              <td style="width: 25%;">
                 <input type="radio" id="home" name="used_for" value="home" />
                 <label for="home">Home</label><br />
                 <input
@@ -232,7 +230,7 @@
                 <label for="Macintosh">Macintosh</label>
               </td>
 
-              <td colspan="2" valign="top">
+              <td colspan="2" valign="top"  width="44%">
                 <input type="checkbox" id="UNIX" name="system" value="UNIX" />
                 <label for="UNIX">UNIX</label><br />
                 <input
@@ -262,10 +260,10 @@
               </td>
             </tr>
           </table>
-
-          <br />
-          <input type="submit" value="Click to register" />
-          <input type="reset" value="Click to cancel" />
+          <div class="bottom">
+            <input type="submit" value="Click to register" />
+            <input type="reset" value="Click to cancel" />
+          </div>
         </form>
       </center>
     </div>
